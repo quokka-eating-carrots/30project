@@ -1,4 +1,4 @@
-const path = require("path");
+const Path = require("path");
 const TerserWebpackPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractplugin = require('mini-css-extract-plugin');
@@ -8,7 +8,7 @@ module.exports = {
   entry: "./src/js/index.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "./dist"),
+    path: Path.resolve(__dirname, "./dist"),
     clean: true
   },
   devtool: "source-map",
