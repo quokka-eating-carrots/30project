@@ -1,4 +1,4 @@
 import "../css/style.css";
-import { Slide } from "./slide.js";
+import Slider from "./slide";
 
-new Slide();
+new Slider();

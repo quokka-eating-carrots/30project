@@ -41,6 +41,10 @@ module.exports = {
       {
         test: /\.css$/,
         use: [MiniCssExtractplugin.loader, "css-loader"]
+      },
+      {
+        test: /\.jpeg$/,
+        type: 'asset/inline'
       }
     ]
   },
