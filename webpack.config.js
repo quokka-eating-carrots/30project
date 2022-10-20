@@ -3,6 +3,7 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractplugin = require('mini-css-extract-plugin');
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: "./src/js/index.js",
@@ -24,9 +25,15 @@ module.exports = {
       title: "image-slide",
       template: "./index.html",
       inject: "body",
+      favicon: "./favicon.ico"
     }),
     new MiniCssExtractplugin( {
       filename: "style.css"
+    }),
+    new CopyPlugin( {
+      patterns: [
+        { from: 'src' }
+      ]
     })
   ],
   module: {
