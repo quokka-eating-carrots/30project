@@ -1,4 +1,4 @@
 import "../css/style.css";
-import { Keyboard } from "./keyboard.js";
+import { Slide } from "./slide.js";
 
-new Keyboard();
+new Slide();

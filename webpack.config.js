@@ -21,10 +21,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin( {
-      title: "keyboard",
+      title: "image-slide",
       template: "./index.html",
       inject: "body",
-      favicon: "./favicon.ico"
     }),
     new MiniCssExtractplugin( {
       filename: "style.css"
