@@ -30,6 +30,8 @@ $ npm i -D eslint-config-prettier eslint-plugin-prettier
  }
 ```
 
+강의에서 사용한 일요일 선택 방법
+
 ```javascript
 colorSun() {
   const sundayEls = this.datesEl.querySelectorAll (
