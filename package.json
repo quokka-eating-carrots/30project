@@ -1,11 +1,11 @@
 {
   "name": "30project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Image Slide",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack-dev-server"
+    "start": "snowpack dev",
+    "build": "snowpack build"
   },
   "repository": {
     "type": "git",
@@ -19,21 +19,13 @@
   },
   "homepage": "https://github.com/quokka-eating-carrots/30project#readme",
   "devDependencies": {
-    "copy-webpack-plugin": "^11.0.0",
-    "css-loader": "^6.7.1",
-    "css-minimizer-webpack-plugin": "^4.2.2",
-    "eslint": "^8.25.0",
+    "@snowpack/plugin-sass": "^1.4.0",
+    "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "html-webpack-plugin": "^5.5.0",
-    "mini-css-extract-plugin": "^2.6.1",
-    "prettier": "2.7.1",
-    "terser-webpack-plugin": "^5.3.6",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.0.0-rc.1"
+    "snowpack": "^3.8.8"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.2.0"
+    "prettier": "2.7.1"
   }
 }
