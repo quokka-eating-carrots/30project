@@ -5,35 +5,40 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <script src="index.js"></script>
-  <title>calculator</title>
+  <script defer src="index.js"></script>
+  <title>bmi calculator</title>
 </head>
 <body>
-  <div class="row">
-    <input type="text" disabled id="top-inp">
-  </div>
-  <div class="row">
-    <div class="btn" onclick="inputNum(7)">7</div>
-    <div class="btn" onclick="inputNum(8)">8</div>
-    <div class="btn" onclick="inputNum(9)">9</div>
-    <div class="btn" onclick="inputEqu()">=</div>
-  </div>
-  <div class="row">
-    <div class="btn" onclick="inputNum(4)">4</div>
-    <div class="btn" onclick="inputNum(5)">5</div>
-    <div class="btn" onclick="inputNum(6)">6</div>
-    <div class="btn" onclick="inputOper('+')">+</div>
-  </div>
-  <div class="row">
-    <div class="btn" onclick="inputNum(1)">1</div>
-    <div class="btn" onclick="inputNum(2)">2</div>
-    <div class="btn" onclick="inputNum(3)">3</div>
-    <div class="btn" onclick="inputOper('-')">-</div>
-  </div>
-  <div class="row">
-    <div class="btn btn-lg" onclick="inputNum(0)">0</div>
-    <div class="btn" onclick="inputOper('/')">/</div>
-    <div class="btn" onclick="inputOper('*')">*</div>
-  </div>
+  <form onsubmit="onSubmit(event)" onreset="document.querySelector('#res').style.display = 'none'">
+    <div class="row">
+      <div class="form-inp">
+        <label for="w">
+          몸무게(kg)
+        </label>
+        <input class="inp" type="number" min="30" placeholder="kg 단위" name="w" id="w">
+      </div>
+      <div class="form-inp">
+        <label for="h">
+          신장(m)
+        </label>
+        <input class="inp" type="number" step="0.01" min="0.5" placeholder="m 단위" name="h" id="h">
+      </div>
+      <button class="btn" type="submit">결과</button>
+    </div>
+    <div id="res">
+      <meter min="10" max="30" optimum="22" id="meter" low="18.5" high="25"></meter>
+      <div class="res-text">
+        <div>
+          당신의 BMI는 <span id="bmi"></span> 입니다.
+        </div>
+        <div>
+          <span id="state"></span>입니다.
+        </div>
+      </div>
+      <div style="text-align: center">
+        <button class="btn" type="reset">초기화</button>
+      </div>
+    </div>
+  </form>
 </body>
 </html>
