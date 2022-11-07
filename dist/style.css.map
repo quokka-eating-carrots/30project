@@ -1,0 +1,1 @@
+{"version":3,"file":"style.css","mappings":"AAAA,KACE,wBACF","sources":["webpack://30project/./src/css/style.css"],"sourcesContent":["body {\r\n  background-color: aquamarine;\r\n}"],"names":[],"sourceRoot":""}
